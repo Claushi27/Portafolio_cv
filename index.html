@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claudio Cabrera - Desarrollador Full Stack</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>CC</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-text="inicio">Inicio</a></li>
+                <li><a href="#about" data-text="sobre-mi">Sobre Mí</a></li>
+                <li><a href="#skills" data-text="habilidades">Habilidades</a></li>
+                <li><a href="#projects" data-text="proyectos">Proyectos</a></li>
+                <li><a href="#experience" data-text="experiencia">Experiencia</a></li>
+                <li><a href="#contact" data-text="contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-text">EN</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting" data-text="hola-soy">Hola, soy</span>
+                    <span class="name">Claudio Cabrera</span>
+                    <span class="role" data-text="desarrollador-fullstack">Desarrollador Full Stack</span>
+                </h1>
+                <p class="hero-description" data-text="hero-description">
+                    Estudiante de Ingeniería en Informática enfocado en desarrollo web moderno con Python, JavaScript y SQL.
+                    Apasionado por crear soluciones digitales innovadoras y aprendiendo Machine Learning.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-text="ver-proyectos">Ver Proyectos</a>
+                    <a href="assets/docs/CV_Claudio_Cabrera.pdf" class="btn btn-secondary" target="_blank" data-text="descargar-cv">Descargar CV</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="tech-card">Python</div>
+                    <div class="tech-card">JavaScript</div>
+                    <div class="tech-card">Angular</div>
+                    <div class="tech-card">Flask</div>
+                    <div class="tech-card">SQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-text="sobre-mi">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-text="about-p1">
+                        Soy estudiante de 3er año de Ingeniería en Informática en Duoc UC, con una pasión por el desarrollo full-stack
+                        y una mentalidad de resolución de problemas desarrollada durante mi experiencia en atención al cliente.
+                    </p>
+                    <p data-text="about-p2">
+                        Mi transición desde el call center al desarrollo de software me ha enseñado la importancia de la comunicación
+                        efectiva y el trabajo bajo presión. Actualmente estoy expandiendo mis conocimientos hacia el Machine Learning
+                        y buscando oportunidades para crecer como desarrollador junior.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span data-text="estudiando">Estudiando Ing. Informática</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-code"></i>
+                            <span data-text="desarrollador-fullstack">Desarrollador Full Stack</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-brain"></i>
+                            <span data-text="aprendiendo-ml">Aprendiendo ML</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-language"></i>
+                            <span data-text="ingles-intermedio">Inglés Intermedio-Avanzado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-text="habilidades">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-text="frontend">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-text="backend">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Flask</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">API REST</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-text="bases-datos">Bases de Datos</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQLite</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-text="herramientas">Herramientas</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Postman</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-text="proyectos">Proyectos Destacados</h2>
+            <div class="projects-grid">
+
+                <!-- AniEmotion Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/aniemotion-preview.jpg" alt="AniEmotion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="project-placeholder">
+                            <i class="fas fa-heart"></i>
+                            <span>AniEmotion</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-text="aniemotion-titulo">AniEmotion - Recomendador de Anime</h3>
+                        <p data-text="aniemotion-desc">
+                            Sistema web full-stack que recomienda anime basado en emociones. Incluye gestión de usuarios,
+                            reviews, comentarios e integración con API Jikan.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Claushi27/Anime-Recommender" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span data-text="ver-codigo">Ver Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RegisterAPP Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/registerapp-preview.jpg" alt="RegisterAPP" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>RegisterAPP</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-text="registerapp-titulo">RegisterAPP - Asistencia Móvil</h3>
+                        <p data-text="registerapp-desc">
+                            Aplicación móvil desarrollada en Angular para registro de asistencia mediante códigos QR,
+                            con geolocalización y consulta del clima local.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Ionic</span>
+                            <span class="tech-tag">APIs REST</span>
+                            <span class="tech-tag">Geolocalización</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Claushi27/RegisterAPP" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span data-text="ver-codigo">Ver Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FERREMAS Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/ferremas-preview.jpg" alt="FERREMAS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>FERREMAS</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-text="ferremas-titulo">FERREMAS - E-commerce</h3>
+                        <p data-text="ferremas-desc">
+                            Proyecto académico de e-commerce con desarrollo de API de productos, integración de
+                            pasarela de pagos Webpay y API de conversión de divisas.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">APIs REST</span>
+                            <span class="tech-tag">Webpay</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Claushi27/Ferremas_API" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span data-text="ver-codigo">Ver Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dog Store Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/dogstore-preview.jpg" alt="Dog Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="project-placeholder">
+                            <i class="fas fa-dog"></i>
+                            <span data-text="tienda-perros">Tienda de Perros</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-text="dogstore-titulo">Tienda de Perros - E-commerce</h3>
+                        <p data-text="dogstore-desc">
+                            Página web de e-commerce para venta de perros con sistema de carrito de compras,
+                            gestión de productos y proceso de checkout completo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span data-text="ver-codigo">Ver Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-text="experiencia">Experiencia & Educación</h2>
+            <div class="timeline">
+
+                <!-- Education -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-text="ing-informatica">Ingeniería en Informática</h3>
+                            <span class="timeline-date">2022 - Presente</span>
+                        </div>
+                        <h4 class="timeline-subtitle">Duoc UC</h4>
+                        <p data-text="ing-desc">
+                            Estudiante de 3er año enfocado en desarrollo full-stack. Certificaciones en Análisis de Datos,
+                            Programación de Software, Análisis de Requerimientos y Calidad de Software.
+                        </p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-text="ejecutivo-call">Ejecutivo Call Center</h3>
+                            <span class="timeline-date">Feb 2023 - Feb 2024</span>
+                        </div>
+                        <h4 class="timeline-subtitle">Konecta (para Wom)</h4>
+                        <p data-text="call-desc">
+                            Atención a clientes de fibra óptica y móvil, resolución de consultas técnicas y comerciales.
+                            Desarrollo de habilidades de comunicación efectiva y trabajo bajo presión.
+                        </p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-text="contacto">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-text="hablemos">¡Hablemos!</h3>
+                    <p data-text="contacto-desc">
+                        Estoy buscando oportunidades como desarrollador junior. Si tienes un proyecto interesante
+                        o una oportunidad laboral, me encantaría conocer más detalles.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:cabreraclaudiov@gmail.com">cabreraclaudiov@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+56945017103">+56 9 4501 7103</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santiago, Chile</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Claushi27" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/claudio-cabrera" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-text="nombre">Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-text="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" data-text="asunto">Asunto</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message" data-text="mensaje">Mensaje</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-text="enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Claudio Cabrera. <span data-text="todos-derechos">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/language.js"></script>
+</body>
+</html>
