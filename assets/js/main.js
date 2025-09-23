@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initMobileMenu();
     initSmoothScrolling();
+    initCVDownload();
 });
 
 // ===== NAVIGATION =====
@@ -108,39 +109,44 @@ function initSmoothScrolling() {
 // ===== SCROLL EFFECTS =====
 function initScrollEffects() {
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.2,
+        rootMargin: '0px 0px -20px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
+            } else {
+                // Keep content visible but allow re-animation on scroll up
+                // entry.target.classList.remove('in-view');
             }
         });
     }, observerOptions);
 
-    // Observe elements for animation
-    document.querySelectorAll('.observe-fade, .observe-scale, .observe-slide-left, .observe-slide-right').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Add animation classes to elements
+    // Simplify animation setup - make sure elements are visible by default
     document.querySelectorAll('.project-card').forEach((card, index) => {
-        card.classList.add('observe-fade');
-        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('observe-fade', 'in-view'); // Start visible
+        observer.observe(card);
     });
 
     document.querySelectorAll('.skill-category').forEach((skill, index) => {
-        skill.classList.add('observe-scale');
-        skill.style.animationDelay = `${index * 0.2}s`;
+        skill.classList.add('observe-scale', 'in-view'); // Start visible
+        observer.observe(skill);
     });
 
     document.querySelectorAll('.timeline-item').forEach((item, index) => {
         const isOdd = index % 2 === 0;
-        item.classList.add(isOdd ? 'observe-slide-left' : 'observe-slide-right');
-        item.style.animationDelay = `${index * 0.3}s`;
+        item.classList.add(isOdd ? 'observe-slide-left' : 'observe-slide-right', 'in-view'); // Start visible
+        observer.observe(item);
     });
+
+    // Make sections visible immediately on load
+    setTimeout(() => {
+        document.querySelectorAll('.observe-fade, .observe-scale, .observe-slide-left, .observe-slide-right').forEach(el => {
+            el.classList.add('in-view');
+        });
+    }, 100);
 }
 
 // ===== SKILL BARS ANIMATION =====
@@ -426,3 +432,35 @@ window.addEventListener('unhandledrejection', (e) => {
     console.error('Unhandled Promise Rejection:', e.reason);
     // Could send to error tracking service in production
 });
+
+// ===== CV DOWNLOAD =====
+function initCVDownload() {
+    const cvButton = document.querySelector('.cv-download');
+
+    if (cvButton) {
+        cvButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentLang = getCurrentLanguage();
+            const cvPath = currentLang === 'es'
+                ? 'assets/docs/CV_Claudio_Cabrera.pdf'
+                : 'assets/docs/CV_Claudio_Cabrera_eng.pdf';
+
+            // Create temporary link and trigger download
+            const link = document.createElement('a');
+            link.href = cvPath;
+            link.download = currentLang === 'es'
+                ? 'CV_Claudio_Cabrera.pdf'
+                : 'CV_Claudio_Cabrera_English.pdf';
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+
+    // Update CV button when language changes
+    document.addEventListener('languageChanged', () => {
+        // Button text is already handled by the translation system
+        // This ensures the correct CV will be downloaded
+    });
+}

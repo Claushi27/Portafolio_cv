@@ -25,7 +25,7 @@
                 <li><a href="#contact" data-text="contacto">Contacto</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="lang-toggle" id="langToggle">
+                <button class="lang-toggle" id="langToggle" data-tooltip="Cambiar a English">
                     <span class="lang-text">EN</span>
                 </button>
                 <button class="theme-toggle" id="themeToggle">
@@ -55,7 +55,7 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary" data-text="ver-proyectos">Ver Proyectos</a>
-                    <a href="assets/docs/CV_Claudio_Cabrera.pdf" class="btn btn-secondary" target="_blank" data-text="descargar-cv">Descargar CV</a>
+                    <a href="#" class="btn btn-secondary cv-download" data-text="descargar-cv">Descargar CV</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -124,25 +124,25 @@
                         <div class="skill-item">
                             <span class="skill-name">JavaScript</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                                <div class="skill-progress" data-progress="70"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Angular</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                                <div class="skill-progress" data-progress="65"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">HTML5/CSS3</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                                <div class="skill-progress" data-progress="75"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">TypeScript</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
+                                <div class="skill-progress" data-progress="60"></div>
                             </div>
                         </div>
                     </div>
@@ -154,25 +154,25 @@
                         <div class="skill-item">
                             <span class="skill-name">Python</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                                <div class="skill-progress" data-progress="65"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Flask</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                                <div class="skill-progress" data-progress="60"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">API REST</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
+                                <div class="skill-progress" data-progress="55"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Java</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="60"></div>
+                                <div class="skill-progress" data-progress="50"></div>
                             </div>
                         </div>
                     </div>
@@ -184,13 +184,13 @@
                         <div class="skill-item">
                             <span class="skill-name">SQL</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
+                                <div class="skill-progress" data-progress="65"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">SQLite</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                                <div class="skill-progress" data-progress="60"></div>
                             </div>
                         </div>
                     </div>
@@ -202,13 +202,13 @@
                         <div class="skill-item">
                             <span class="skill-name">Git/GitHub</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
+                                <div class="skill-progress" data-progress="70"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Postman</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
+                                <div class="skill-progress" data-progress="65"></div>
                             </div>
                         </div>
                     </div>
@@ -221,12 +221,16 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title" data-text="proyectos">Proyectos Destacados</h2>
+            <div class="projects-intro">
+                <h3 class="projects-main-text" data-text="proyectos-main">Últimos 3 Proyectos</h3>
+                <p class="projects-count" data-text="proyectos-count">10+ proyectos realizados</p>
+            </div>
             <div class="projects-grid">
 
                 <!-- AniEmotion Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/aniemotion-preview.jpg" alt="AniEmotion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <img src="assets/images/animetion_1.jpg" alt="AniEmotion" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="project-placeholder">
                             <i class="fas fa-heart"></i>
                             <span>AniEmotion</span>
@@ -235,49 +239,22 @@
                     <div class="project-content">
                         <h3 data-text="aniemotion-titulo">AniEmotion - Recomendador de Anime</h3>
                         <p data-text="aniemotion-desc">
-                            Sistema web full-stack que recomienda anime basado en emociones. Incluye gestión de usuarios,
-                            reviews, comentarios e integración con API Jikan.
+                            Sistema web full-stack que recomienda anime basado en emociones. Conecta con MyAnimeList,
+                            incluye dashboard personal, sistema de puntajes, búsqueda avanzada e inicio de sesión.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Flask</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">API REST</span>
+                            <span class="tech-tag">MyAnimeList API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Claushi27/Anime-Recommender" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                                <span data-text="ver-codigo">Ver Código</span>
+                            <a href="https://aniemotion.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-text="ver-demo">Ver Demo</span>
                             </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RegisterAPP Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/registerapp-preview.jpg" alt="RegisterAPP" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="project-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>RegisterAPP</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-text="registerapp-titulo">RegisterAPP - Asistencia Móvil</h3>
-                        <p data-text="registerapp-desc">
-                            Aplicación móvil desarrollada en Angular para registro de asistencia mediante códigos QR,
-                            con geolocalización y consulta del clima local.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Ionic</span>
-                            <span class="tech-tag">APIs REST</span>
-                            <span class="tech-tag">Geolocalización</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Claushi27/RegisterAPP" target="_blank" class="project-link">
+                            <a href="https://github.com/Claushi27/Anime-Recommender" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i>
                                 <span data-text="ver-codigo">Ver Código</span>
                             </a>
@@ -288,8 +265,7 @@
                 <!-- FERREMAS Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/ferremas-preview.jpg" alt="FERREMAS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="project-placeholder">
+                        <div class="project-placeholder" style="display: flex;">
                             <i class="fas fa-shopping-cart"></i>
                             <span>FERREMAS</span>
                         </div>
@@ -318,7 +294,7 @@
                 <!-- Dog Store Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/dogstore-preview.jpg" alt="Dog Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <img src="assets/images/pagina_perros.jpg" alt="Dog Store" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                         <div class="project-placeholder">
                             <i class="fas fa-dog"></i>
                             <span data-text="tienda-perros">Tienda de Perros</span>
@@ -328,7 +304,7 @@
                         <h3 data-text="dogstore-titulo">Tienda de Perros - E-commerce</h3>
                         <p data-text="dogstore-desc">
                             Página web de e-commerce para venta de perros con sistema de carrito de compras,
-                            gestión de productos y proceso de checkout completo.
+                            gestión de productos y proceso de checkout completo con persistencia de datos.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">JavaScript</span>
@@ -337,7 +313,11 @@
                             <span class="tech-tag">Local Storage</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link">
+                            <a href="https://pagina-perros.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-text="ver-demo">Ver Demo</span>
+                            </a>
+                            <a href="https://github.com/Claushi27/pagina_perros" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i>
                                 <span data-text="ver-codigo">Ver Código</span>
                             </a>

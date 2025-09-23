@@ -31,14 +31,14 @@ const translations = {
         'herramientas': 'Herramientas',
 
         // Projects Section
+        'proyectos-main': 'Últimos 3 Proyectos',
+        'proyectos-count': '10+ proyectos realizados',
         'aniemotion-titulo': 'AniEmotion - Recomendador de Anime',
-        'aniemotion-desc': 'Sistema web full-stack que recomienda anime basado en emociones. Incluye gestión de usuarios, reviews, comentarios e integración con API Jikan.',
-        'registerapp-titulo': 'RegisterAPP - Asistencia Móvil',
-        'registerapp-desc': 'Aplicación móvil desarrollada en Angular para registro de asistencia mediante códigos QR, con geolocalización y consulta del clima local.',
+        'aniemotion-desc': 'Sistema web full-stack que recomienda anime basado en emociones. Conecta con MyAnimeList, incluye dashboard personal, sistema de puntajes, búsqueda avanzada e inicio de sesión.',
         'ferremas-titulo': 'FERREMAS - E-commerce',
         'ferremas-desc': 'Proyecto académico de e-commerce con desarrollo de API de productos, integración de pasarela de pagos Webpay y API de conversión de divisas.',
         'dogstore-titulo': 'Tienda de Perros - E-commerce',
-        'dogstore-desc': 'Página web de e-commerce para venta de perros con sistema de carrito de compras, gestión de productos y proceso de checkout completo.',
+        'dogstore-desc': 'Página web de e-commerce para venta de perros con sistema de carrito de compras, gestión de productos y proceso de checkout completo con persistencia de datos.',
         'tienda-perros': 'Tienda de Perros',
         'ver-codigo': 'Ver Código',
         'ver-demo': 'Ver Demo',
@@ -92,14 +92,14 @@ const translations = {
         'herramientas': 'Tools',
 
         // Projects Section
+        'proyectos-main': 'Latest 3 Projects',
+        'proyectos-count': '10+ projects completed',
         'aniemotion-titulo': 'AniEmotion - Anime Recommender',
-        'aniemotion-desc': 'Full-stack web system that recommends anime based on emotions. Includes user management, reviews, comments and Jikan API integration.',
-        'registerapp-titulo': 'RegisterAPP - Mobile Attendance',
-        'registerapp-desc': 'Mobile application developed in Angular for attendance registration through QR codes, with geolocation and local weather consultation.',
+        'aniemotion-desc': 'Full-stack web system that recommends anime based on emotions. Connects with MyAnimeList, includes personal dashboard, scoring system, advanced search and login.',
         'ferremas-titulo': 'FERREMAS - E-commerce',
         'ferremas-desc': 'Academic e-commerce project with product API development, Webpay payment gateway integration and currency conversion API.',
         'dogstore-titulo': 'Dog Store - E-commerce',
-        'dogstore-desc': 'E-commerce website for dog sales with shopping cart system, product management and complete checkout process.',
+        'dogstore-desc': 'E-commerce website for dog sales with shopping cart system, product management and complete checkout process with data persistence.',
         'tienda-perros': 'Dog Store',
         'ver-codigo': 'View Code',
         'ver-demo': 'View Demo',
@@ -186,6 +186,12 @@ class LanguageManager {
 
         if (langText) {
             langText.textContent = this.currentLanguage === 'es' ? 'EN' : 'ES';
+        }
+
+        // Update tooltip
+        if (langToggle) {
+            const tooltip = this.currentLanguage === 'es' ? 'Cambiar a English' : 'Switch to Español';
+            langToggle.setAttribute('data-tooltip', tooltip);
         }
     }
 

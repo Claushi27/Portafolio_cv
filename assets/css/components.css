@@ -221,6 +221,11 @@
 }
 
 /* ===== SKILLS SECTION ===== */
+.skills {
+    opacity: 1;
+    visibility: visible;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -232,6 +237,9 @@
     padding: var(--space-xl);
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 .skill-category h3 {
@@ -275,6 +283,31 @@
 /* ===== PROJECTS SECTION ===== */
 .projects {
     background: var(--bg-secondary);
+    opacity: 1;
+    visibility: visible;
+}
+
+.projects-intro {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.projects-main-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.projects-count {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .projects-grid {
@@ -289,6 +322,9 @@
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 .project-card:hover {
@@ -378,6 +414,11 @@
 }
 
 /* ===== EXPERIENCE SECTION ===== */
+.experience {
+    opacity: 1;
+    visibility: visible;
+}
+
 .timeline {
     max-width: 800px;
     margin: 0 auto;
@@ -400,6 +441,9 @@
     align-items: center;
     margin-bottom: var(--space-3xl);
     position: relative;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 .timeline-item:nth-child(odd) {

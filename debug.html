@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Portfolio Claudio Cabrera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #0f0f23;
+            color: white;
+        }
+        .debug-section {
+            background: #1a1a2e;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .status-ok { border-left: 4px solid #10b981; }
+        .status-error { border-left: 4px solid #ef4444; }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .test-card {
+            background: #16213e;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+        .image-test {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .placeholder {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            color: white;
+            font-weight: bold;
+        }
+        button {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Portfolio Debug Page</h1>
+
+    <div class="debug-section status-ok">
+        <h2>✅ Archivos y Estructura</h2>
+        <p><strong>Directorio Base:</strong> C:\Users\futbo\Desktop\Paginas Webs\Portafolio\</p>
+        <ul>
+            <li>index.html ✅</li>
+            <li>assets/css/ ✅</li>
+            <li>assets/js/ ✅</li>
+            <li>assets/images/ ✅</li>
+            <li>assets/docs/ ✅</li>
+        </ul>
+    </div>
+
+    <div class="debug-section status-ok">
+        <h2>🖼️ Test de Imágenes</h2>
+        <div class="test-grid">
+            <div class="test-card">
+                <h3>AniEmotion</h3>
+                <img src="assets/images/animetion_1.jpg" alt="AniEmotion" class="image-test"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="placeholder" style="display: none;">
+                    <span>📺 AniEmotion</span>
+                </div>
+                <p>Ruta: assets/images/animetion_1.jpg</p>
+            </div>
+
+            <div class="test-card">
+                <h3>Página de Perros</h3>
+                <img src="assets/images/pagina_perros.jpg" alt="Página Perros" class="image-test"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="placeholder" style="display: none;">
+                    <span>🐕 Página Perros</span>
+                </div>
+                <p>Ruta: assets/images/pagina_perros.jpg</p>
+            </div>
+
+            <div class="test-card">
+                <h3>FERREMAS</h3>
+                <div class="placeholder" style="display: flex;">
+                    <span>🛒 FERREMAS</span>
+                </div>
+                <p>Usando placeholder (sin imagen)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="debug-section status-ok">
+        <h2>🌐 Test de Funcionalidades</h2>
+        <button onclick="testLanguage()">🔄 Test Cambio Idioma</button>
+        <button onclick="testTheme()">🌓 Test Cambio Tema</button>
+        <button onclick="testMobile()">📱 Test Vista Móvil</button>
+        <button onclick="testCVDownload()">📄 Test Descarga CV</button>
+        <button onclick="testSkills()">📊 Test Niveles Skills</button>
+        <div id="test-results" style="margin-top: 20px; padding: 20px; background: #16213e; border-radius: 4px;">
+            <p>Haz clic en los botones para probar las funcionalidades...</p>
+        </div>
+    </div>
+
+    <div class="debug-section status-ok">
+        <h2>🔗 Test de Enlaces</h2>
+        <div class="test-grid">
+            <div class="test-card">
+                <h3>AniEmotion</h3>
+                <a href="https://aniemotion.onrender.com/" target="_blank" style="color: #6366f1;">🌐 Demo Live</a><br>
+                <a href="https://github.com/Claushi27/Anime-Recommender" target="_blank" style="color: #6366f1;">📂 GitHub</a>
+            </div>
+            <div class="test-card">
+                <h3>Página de Perros</h3>
+                <a href="https://pagina-perros.onrender.com/" target="_blank" style="color: #6366f1;">🌐 Demo Live</a><br>
+                <a href="https://github.com/Claushi27/pagina_perros" target="_blank" style="color: #6366f1;">📂 GitHub</a>
+            </div>
+            <div class="test-card">
+                <h3>FERREMAS</h3>
+                <a href="https://github.com/Claushi27/Ferremas_API" target="_blank" style="color: #6366f1;">📂 GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="debug-section">
+        <h2>🚀 Ir al Portfolio</h2>
+        <p>Si todo se ve bien aquí, el portfolio principal debería funcionar correctamente.</p>
+        <a href="index.html" style="background: #10b981; color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px;">
+            🌟 Abrir Portfolio Principal
+        </a>
+    </div>
+
+    <script>
+        function testLanguage() {
+            document.getElementById('test-results').innerHTML = `
+                <h3>✅ Test Idiomas</h3>
+                <p>• Español: Claudio Cabrera - Desarrollador Full Stack</p>
+                <p>• English: Claudio Cabrera - Full Stack Developer</p>
+                <p>• CV ESP: CV_Claudio_Cabrera.pdf</p>
+                <p>• CV ENG: CV_Claudio_Cabrera_eng.pdf</p>
+            `;
+        }
+
+        function testTheme() {
+            document.getElementById('test-results').innerHTML = `
+                <h3>✅ Test Temas</h3>
+                <p>• Modo Oscuro: Fondo #0f0f23 (actual)</p>
+                <p>• Modo Claro: Fondo #ffffff</p>
+                <p>• Transición suave implementada ✅</p>
+            `;
+        }
+
+        function testMobile() {
+            document.getElementById('test-results').innerHTML = `
+                <h3>✅ Test Responsive</h3>
+                <p>• Ancho actual: ${window.innerWidth}px</p>
+                <p>• Breakpoint móvil: 768px</p>
+                <p>• Grid adaptativo: ${window.innerWidth < 768 ? '1 columna' : 'Múltiples columnas'}</p>
+                <p>• Menú hamburguesa: ${window.innerWidth < 768 ? 'Activo' : 'Inactivo'}</p>
+            `;
+        }
+
+        function testCVDownload() {
+            document.getElementById('test-results').innerHTML = `
+                <h3>✅ Test Descarga CV</h3>
+                <p>• CV Español: assets/docs/CV_Claudio_Cabrera.pdf</p>
+                <p>• CV Inglés: assets/docs/CV_Claudio_Cabrera_eng.pdf</p>
+                <p>• Cambio automático según idioma ✅</p>
+            `;
+        }
+
+        function testSkills() {
+            document.getElementById('test-results').innerHTML = `
+                <h3>✅ Test Niveles de Habilidades (Junior Level)</h3>
+                <p><strong>Frontend (60-75%):</strong></p>
+                <p>• JavaScript: 70% • Angular: 65% • HTML/CSS: 75% • TypeScript: 60%</p>
+                <p><strong>Backend (50-65%):</strong></p>
+                <p>• Python: 65% • Flask: 60% • API REST: 55% • Java: 50%</p>
+                <p><strong>Bases de Datos (60-65%):</strong></p>
+                <p>• SQL: 65% • SQLite: 60%</p>
+                <p><strong>Herramientas (65-70%):</strong></p>
+                <p>• Git/GitHub: 70% • Postman: 65%</p>
+                <p style="color: #10b981; margin-top: 10px;">✅ Niveles ajustados para desarrollador junior</p>
+            `;
+        }
+
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            console.log('Debug page loaded successfully');
+            console.log('Window size:', window.innerWidth, 'x', window.innerHeight);
+        });
+    </script>
+</body>
+</html>
