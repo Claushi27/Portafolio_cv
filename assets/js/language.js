@@ -52,11 +52,13 @@ const translations = {
         // Contact Section
         'hablemos': '¡Hablemos!',
         'contacto-desc': 'Estoy buscando oportunidades como desarrollador junior. Si tienes un proyecto interesante o una oportunidad laboral, me encantaría conocer más detalles.',
-        'nombre': 'Nombre',
-        'email': 'Email',
-        'asunto': 'Asunto',
-        'mensaje': 'Mensaje',
-        'enviar': 'Enviar Mensaje',
+        'metodos-contacto': 'Métodos de Contacto',
+        'email-directo': 'Email Directo',
+        'email-desc': 'La forma más rápida de contactarme',
+        'enviar-email': 'Enviar Email',
+        'llamada-directa': 'Llamada Directa',
+        'llamada-desc': 'Para conversaciones más detalladas',
+        'llamar-ahora': 'Llamar Ahora',
 
         // Footer
         'todos-derechos': 'Todos los derechos reservados.'
@@ -113,11 +115,13 @@ const translations = {
         // Contact Section
         'hablemos': 'Let\'s Talk!',
         'contacto-desc': 'I\'m looking for opportunities as a junior developer. If you have an interesting project or job opportunity, I\'d love to learn more details.',
-        'nombre': 'Name',
-        'email': 'Email',
-        'asunto': 'Subject',
-        'mensaje': 'Message',
-        'enviar': 'Send Message',
+        'metodos-contacto': 'Contact Methods',
+        'email-directo': 'Direct Email',
+        'email-desc': 'The fastest way to reach me',
+        'enviar-email': 'Send Email',
+        'llamada-directa': 'Direct Call',
+        'llamada-desc': 'For more detailed conversations',
+        'llamar-ahora': 'Call Now',
 
         // Footer
         'todos-derechos': 'All rights reserved.'
@@ -126,14 +130,59 @@ const translations = {
 
 class LanguageManager {
     constructor() {
-        this.currentLanguage = localStorage.getItem('language') || 'es';
+        this.currentLanguage = localStorage.getItem('language') || null;
         this.init();
     }
 
     init() {
+        // Check if this is first visit - force popup for testing
+        const hasSeenLanguageModal = localStorage.getItem('hasSeenLanguageModal');
+
+        if (!hasSeenLanguageModal || !this.currentLanguage) {
+            // Show modal on first visit or if no language is set
+            setTimeout(() => this.showLanguageModal(), 500);
+        } else {
+            this.setupLanguageToggle();
+            this.updateContent();
+            this.updateToggleButton();
+        }
+        this.setupLanguageModal();
+    }
+
+    showLanguageModal() {
+        const modal = document.getElementById('languageModal');
+        if (modal) {
+            modal.classList.add('show');
+        }
+    }
+
+    hideLanguageModal() {
+        const modal = document.getElementById('languageModal');
+        if (modal) {
+            modal.classList.remove('show');
+        }
+    }
+
+    setupLanguageModal() {
+        const languageOptions = document.querySelectorAll('.language-option');
+
+        languageOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const selectedLang = option.getAttribute('data-lang');
+                this.setLanguage(selectedLang);
+                this.hideLanguageModal();
+            });
+        });
+    }
+
+    setLanguage(language) {
+        this.currentLanguage = language;
+        localStorage.setItem('language', language);
+        localStorage.setItem('hasSeenLanguageModal', 'true');
         this.setupLanguageToggle();
         this.updateContent();
         this.updateToggleButton();
+        this.updatePageAttributes();
     }
 
     setupLanguageToggle() {
@@ -190,7 +239,7 @@ class LanguageManager {
 
         // Update tooltip
         if (langToggle) {
-            const tooltip = this.currentLanguage === 'es' ? 'Cambiar a English' : 'Switch to Español';
+            const tooltip = this.currentLanguage === 'es' ? 'Switch to English' : 'Cambiar a Español';
             langToggle.setAttribute('data-tooltip', tooltip);
         }
     }

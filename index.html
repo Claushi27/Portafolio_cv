@@ -105,7 +105,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder">
+                    <img src="assets/images/foto_perfil.jfif" alt="Claudio Cabrera" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="image-placeholder" style="display: none;">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
@@ -265,24 +266,31 @@
                 <!-- FERREMAS Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder" style="display: flex;">
+                        <img src="assets/images/Ferrremas.jpg" alt="FERREMAS E-commerce" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="project-placeholder">
                             <i class="fas fa-shopping-cart"></i>
                             <span>FERREMAS</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 data-text="ferremas-titulo">FERREMAS - E-commerce</h3>
+                        <h3 data-text="ferremas-titulo">FERREMAS - E-commerce Ferretería</h3>
                         <p data-text="ferremas-desc">
-                            Proyecto académico de e-commerce con desarrollo de API de productos, integración de
-                            pasarela de pagos Webpay y API de conversión de divisas.
+                            E-commerce académico completo para ferretería con React + TypeScript, Node.js, Supabase y pagos Webpay.
+                            Incluye catálogo de productos, carrito de compras, autenticación de usuarios y diseño responsive.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">APIs REST</span>
-                            <span class="tech-tag">Webpay</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Webpay Plus</span>
+                            <span class="tech-tag">Tailwind CSS</span>
                         </div>
                         <div class="project-links">
+                            <a href="https://ferremas-frontend.onrender.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-text="ver-demo">Ver Demo</span>
+                            </a>
                             <a href="https://github.com/Claushi27/Ferremas_API" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i>
                                 <span data-text="ver-codigo">Ver Código</span>
@@ -404,31 +412,41 @@
                         <a href="https://github.com/Claushi27" target="_blank" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/claudio-cabrera" target="_blank" class="social-link">
+                        <a href="https://www.linkedin.com/in/claudio-cabrera-vega-0992b6296/" target="_blank" class="social-link">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name" data-text="nombre">Nombre</label>
+                <div class="contact-methods">
+                    <h3 data-text="metodos-contacto">Métodos de Contacto</h3>
+                    <div class="contact-method">
+                        <div class="contact-method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-method-info">
+                            <h4 data-text="email-directo">Email Directo</h4>
+                            <p data-text="email-desc">La forma más rápida de contactarme</p>
+                            <a href="mailto:cabreraclaudiov@gmail.com" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                <span data-text="enviar-email">Enviar Email</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email" data-text="email">Email</label>
+                    <div class="contact-method">
+                        <div class="contact-method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-method-info">
+                            <h4 data-text="llamada-directa">Llamada Directa</h4>
+                            <p data-text="llamada-desc">Para conversaciones más detalladas</p>
+                            <a href="tel:+56945017103" class="btn btn-secondary">
+                                <i class="fas fa-phone"></i>
+                                <span data-text="llamar-ahora">Llamar Ahora</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
-                        <label for="subject" data-text="asunto">Asunto</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message" data-text="mensaje">Mensaje</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary" data-text="enviar">Enviar Mensaje</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -439,6 +457,29 @@
             <p>&copy; 2024 Claudio Cabrera. <span data-text="todos-derechos">Todos los derechos reservados.</span></p>
         </div>
     </footer>
+
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="language-modal">
+        <div class="language-modal-content">
+            <h2>Selecciona tu idioma / Choose your language</h2>
+            <div class="language-options">
+                <button class="language-option" data-lang="es">
+                    <div class="language-flag">🇪🇸</div>
+                    <div class="language-info">
+                        <h3>Español</h3>
+                        <p>Versión en español</p>
+                    </div>
+                </button>
+                <button class="language-option" data-lang="en">
+                    <div class="language-flag">🇺🇸</div>
+                    <div class="language-info">
+                        <h3>English</h3>
+                        <p>English version</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>

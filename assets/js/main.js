@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initTheme();
     initScrollEffects();
     initSkillBars();
-    initContactForm();
     initMobileMenu();
     initSmoothScrolling();
     initCVDownload();
@@ -170,55 +169,7 @@ function initSkillBars() {
     });
 }
 
-// ===== CONTACT FORM =====
-function initContactForm() {
-    const form = document.getElementById('contactForm');
 
-    if (form) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-            const button = form.querySelector('button[type="submit"]');
-            const originalText = button.textContent;
-
-            // Show loading state
-            button.textContent = 'Enviando...';
-            button.disabled = true;
-
-            try {
-                // Simulate form submission (replace with actual endpoint)
-                await simulateFormSubmission(formData);
-
-                // Show success message
-                showNotification('¡Mensaje enviado exitosamente!', 'success');
-                form.reset();
-
-            } catch (error) {
-                // Show error message
-                showNotification('Error al enviar el mensaje. Inténtalo de nuevo.', 'error');
-            } finally {
-                // Reset button
-                button.textContent = originalText;
-                button.disabled = false;
-            }
-        });
-    }
-}
-
-// Simulate form submission
-async function simulateFormSubmission(formData) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            // Simulate 90% success rate
-            if (Math.random() > 0.1) {
-                resolve();
-            } else {
-                reject(new Error('Submission failed'));
-            }
-        }, 2000);
-    });
-}
 
 // ===== NOTIFICATIONS =====
 function showNotification(message, type = 'info') {
