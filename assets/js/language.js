@@ -59,6 +59,7 @@ const translations = {
         'llamada-directa': 'Llamada Directa',
         'llamada-desc': 'Para conversaciones más detalladas',
         'llamar-ahora': 'Llamar Ahora',
+        'copiar-telefono': 'Copiar Teléfono',
 
         // Footer
         'todos-derechos': 'Todos los derechos reservados.'
@@ -122,6 +123,7 @@ const translations = {
         'llamada-directa': 'Direct Call',
         'llamada-desc': 'For more detailed conversations',
         'llamar-ahora': 'Call Now',
+        'copiar-telefono': 'Copy Phone',
 
         // Footer
         'todos-derechos': 'All rights reserved.'

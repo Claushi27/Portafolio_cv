@@ -440,10 +440,16 @@
                         <div class="contact-method-info">
                             <h4 data-text="llamada-directa">Llamada Directa</h4>
                             <p data-text="llamada-desc">Para conversaciones más detalladas</p>
-                            <a href="tel:+56945017103" class="btn btn-secondary">
-                                <i class="fas fa-phone"></i>
-                                <span data-text="llamar-ahora">Llamar Ahora</span>
-                            </a>
+                            <div class="contact-buttons">
+                                <a href="tel:+56945017103" class="btn btn-secondary mobile-only">
+                                    <i class="fas fa-phone"></i>
+                                    <span data-text="llamar-ahora">Llamar Ahora</span>
+                                </a>
+                                <button class="btn btn-secondary desktop-only" onclick="copyPhone()">
+                                    <i class="fas fa-copy"></i>
+                                    <span data-text="copiar-telefono">Copiar Teléfono</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -464,14 +470,22 @@
             <h2>Selecciona tu idioma / Choose your language</h2>
             <div class="language-options">
                 <button class="language-option" data-lang="es">
-                    <div class="language-flag">🇪🇸</div>
+                    <div class="language-flag spanish-flag">
+                        <div class="flag-colors">
+                            <div class="red"></div>
+                            <div class="yellow"></div>
+                            <div class="red"></div>
+                        </div>
+                    </div>
                     <div class="language-info">
                         <h3>Español</h3>
                         <p>Versión en español</p>
                     </div>
                 </button>
                 <button class="language-option" data-lang="en">
-                    <div class="language-flag">🇺🇸</div>
+                    <div class="language-flag english-flag">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
                     <div class="language-info">
                         <h3>English</h3>
                         <p>English version</p>
