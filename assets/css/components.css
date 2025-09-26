@@ -697,12 +697,6 @@
     font-size: 0.9rem;
 }
 
-.contact-buttons {
-    display: flex;
-    gap: var(--space-sm);
-    align-items: center;
-}
-
 /* Show/hide based on device */
 .mobile-only {
     display: none;
@@ -712,9 +706,28 @@
     display: inline-flex;
 }
 
+/* Desktop: hide contact methods, show message */
+@media (min-width: 769px) {
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+    }
+
+    .contact-methods::after {
+        content: attr(data-desktop-message);
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-top: var(--space-md);
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .mobile-only {
-        display: inline-flex;
+        display: flex;
     }
 
     .desktop-only {

@@ -384,33 +384,6 @@ window.addEventListener('unhandledrejection', (e) => {
     // Could send to error tracking service in production
 });
 
-// ===== CONTACT UTILITIES =====
-function copyPhone() {
-    const phone = "+56945017103";
-    navigator.clipboard.writeText(phone).then(() => {
-        const currentLang = getCurrentLanguage();
-        const message = currentLang === 'es'
-            ? 'Teléfono copiado al portapapeles: ' + phone
-            : 'Phone copied to clipboard: ' + phone;
-
-        showNotification(message, 'success');
-    }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = phone;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-
-        const currentLang = getCurrentLanguage();
-        const message = currentLang === 'es'
-            ? 'Teléfono copiado: ' + phone
-            : 'Phone copied: ' + phone;
-
-        showNotification(message, 'success');
-    });
-}
 
 // ===== CV DOWNLOAD =====
 function initCVDownload() {

@@ -60,6 +60,7 @@ const translations = {
         'llamada-desc': 'Para conversaciones más detalladas',
         'llamar-ahora': 'Llamar Ahora',
         'copiar-telefono': 'Copiar Teléfono',
+        'metodos-desktop': 'Los métodos de contacto están disponibles solo en dispositivos móviles',
 
         // Footer
         'todos-derechos': 'Todos los derechos reservados.'
@@ -124,6 +125,7 @@ const translations = {
         'llamada-desc': 'For more detailed conversations',
         'llamar-ahora': 'Call Now',
         'copiar-telefono': 'Copy Phone',
+        'metodos-desktop': 'Contact methods are available only on mobile devices',
 
         // Footer
         'todos-derechos': 'All rights reserved.'
@@ -220,6 +222,13 @@ class LanguageManager {
                 }
             }
         });
+
+        // Update contact methods desktop message
+        const contactMethods = document.querySelector('.contact-methods');
+        if (contactMethods) {
+            const desktopMessage = translations[this.currentLanguage]['metodos-desktop'];
+            contactMethods.setAttribute('data-desktop-message', desktopMessage);
+        }
 
         // Update document title
         const title = this.currentLanguage === 'es'
