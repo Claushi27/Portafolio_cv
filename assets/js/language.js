@@ -49,6 +49,9 @@ const translations = {
         // Experience Section
         'ing-informatica': 'Ingeniería en Informática',
         'ing-desc': 'Estudiante de 3er año enfocado en desarrollo full-stack. Certificaciones en Análisis de Datos, Programación de Software, Análisis de Requerimientos y Calidad de Software.',
+        'desarrollador-freelance': 'Desarrollador Full Stack Freelance',
+        'freelance-subtitle': 'Proyectos con Clientes Reales',
+        'freelance-desc': 'Desarrollo de aplicaciones web y móviles para clientes reales. Proyectos destacados: AWKA (E-commerce con Firebase y Mercado Pago) y Sistema de Gestión de Fletes Marítimos (Flutter + Firebase). Especialización en soluciones full-stack con enfoque en experiencia de usuario y escalabilidad.',
         'ejecutivo-call': 'Ejecutivo Call Center',
         'call-desc': 'Atención a clientes de fibra óptica y móvil, resolución de consultas técnicas y comerciales. Desarrollo de habilidades de comunicación efectiva y trabajo bajo presión.',
 
@@ -117,6 +120,9 @@ const translations = {
         // Experience Section
         'ing-informatica': 'Computer Engineering',
         'ing-desc': '3rd year student focused on full-stack development. Certifications in Data Analysis, Software Programming, Requirements Analysis and Software Quality.',
+        'desarrollador-freelance': 'Full Stack Freelance Developer',
+        'freelance-subtitle': 'Projects with Real Clients',
+        'freelance-desc': 'Development of web and mobile applications for real clients. Featured projects: AWKA (E-commerce with Firebase and Mercado Pago) and Maritime Freight Management System (Flutter + Firebase). Specialization in full-stack solutions with focus on user experience and scalability.',
         'ejecutivo-call': 'Call Center Executive',
         'call-desc': 'Customer service for fiber optic and mobile clients, technical and commercial query resolution. Development of effective communication skills and working under pressure.',
 

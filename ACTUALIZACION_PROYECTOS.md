@@ -58,6 +58,25 @@
 
 ---
 
+### Experiencia Laboral Actualizada
+
+#### Desarrollador Full Stack Freelance (NUEVO)
+**Período:** Junio 2024 - Presente
+
+**Descripción:**
+- Desarrollo de aplicaciones web y móviles para clientes reales
+- Proyectos destacados:
+  - AWKA (E-commerce con Firebase y Mercado Pago)
+  - Sistema de Gestión de Fletes Marítimos (Flutter + Firebase)
+- Especialización en soluciones full-stack con enfoque en UX y escalabilidad
+
+**Impacto:**
+- Trabajando actualmente con clientes reales
+- Desarrollo de soluciones empresariales completas
+- Manejo de proyectos desde la concepción hasta el deployment
+
+---
+
 ### Archivos Modificados
 
 1. **index.html**
@@ -65,10 +84,12 @@
    - Agregado proyecto de Fletes Marítimos
    - Añadido Flutter en sección de habilidades Frontend
    - Añadido Firebase en sección de Bases de Datos
+   - **Agregada experiencia freelance (Jun 2024 - Presente)**
 
 2. **assets/js/language.js**
    - Actualizadas traducciones para proyecto AWKA (ES/EN)
    - Agregadas traducciones para proyecto Fletes Marítimos (ES/EN)
+   - **Agregadas traducciones para experiencia freelance (ES/EN)**
 
 ---
 
